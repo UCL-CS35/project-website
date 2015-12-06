@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Antic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:200,300' rel='stylesheet' type='text/css'>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../favicon.ico">
+
+  <title>Neurocinematics Project : Requirements</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../css/bootstrap.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="../css/style.css" rel="stylesheet">
+
+  <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+  <script src="../js/ie-emulation-modes-warning.js"></script>
+  <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="../js/scrollme-master/jquery.scrollme.min.js"></script>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+  <nav class="navbar navbar-inverse">
+    <div class="container" style="margin-left:20px">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" Dataset-toggle="collapse" Dataset-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <img id="nav_logo" src="../images/logo.png">
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="background.html">Background</a></li>
+          <li class="active"><a href="requirements.html">Requirements</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="misc.html">Misc</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+  <div id="body_contatiner">
+    <div id="banner_half" style="background-image:url(../images/requirements.png)">
+      <h2 class="header" id="heading" style="padding-top:10vh;margin-bottom:20px">Requirements</h2>
+      <p class="header_sub">Specifications and Use Cases</p>
+    </div>
+  </div><!-- body_container -->
+
+  <div id="body_content">
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist" style="margin-top:30px;">
+      <li role="presentation" class="active"><a href="#requirements" aria-controls="home" role="tab" data-toggle="tab">Requirements</a></li>
+      <li role="presentation"><a href="#usecases" aria-controls="profile" role="tab" data-toggle="tab">Use Cases</a></li>
+      <li role="presentation"><a href="#glossary" aria-controls="profile" role="tab" data-toggle="tab">Glossary</a></li>
+    </ul>
+
+    <div class="tab-content">
+
+      <div id="requirements" role="tabpanel" class="tab-pane fade in active">
+        <h2 class="title_body">Requirements</h2>
+
+        <p class="body_text">We gather the project requirements through our discussions with our client, Dr Skipper and analysing similar project like <a href="http://neurovault.org/">NeuroVault</a> and <a href="http://www.neurosynth.org/">Neurosynth</a>.</p>
+
+        <p class="body_text">As individuals who don't have any knowledge on neuroscience, we also used ourselves as the target users and identify requirements that will be important to the non-technical users like us.</p>
+
+        <p class="body_text">The following list of requirements had been identified by the team and approved by our client, Dr. Skipper.</p>
+
+        </p>
+        <div class="table-responsive">
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+                <td>ID</td>
+                <td>Category</td>
+                <td>Requirement</td>
+                <td width="12%">Functional?</td>
+                <td>Priority</td>
+                <td>Users</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Availability</td>
+                <td>The Repository shall be available at all time.</td>
+                <td>Non-functional</td>
+                <td>Should</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Performance</td>
+                <td>The Repository shall be able to support 10 concurrent Users at anytime.</td>
+                <td>Non-functional</td>
+                <td>Must</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>User Interface</td>
+                <td>The Repository shall use a web browser as its interface.</td>
+                <td>Non-functional</td>
+                <td>Must</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>User Interface</td>
+                <td>The Repository shall support major modern browsers like Google Chrome, Firefox and Internet Explorer.</td>
+                <td>Non-functional</td>
+                <td>Should</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>User Interface</td>
+                <td>The Repository shall have a responsive layout.</td>
+                <td>Non-functional</td>
+                <td>Could</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Repository Browsing</td>
+                <td>The Repository shall display a list of latest 10 Movies withProcessed Dataset.</td>
+                <td>Functional</td>
+                <td>Must</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Repository Browsing</td>
+                <td>The Repository shall display a search box for Movies with Processed Dataset.</td>
+                <td>Functional</td>
+                <td>Must</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Repository Browsing</td>
+                <td>The Repository shall display a paginated list of all Movies with Processed Dataset.</td>
+                <td>Functional</td>
+                <td>Must</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Repository Browsing</td>
+                <td>The Repository shall display the 3-axis average image of all brain images for a specific Movie.</td>
+                <td>Functional</td>
+                <td>Must</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>10 </td>
+                <td>Repository Browsing</td>
+                <td>The Repository shall display a 3-tabs layout for Terms (default), Components and Details.</td>
+                <td>Functional</td>
+                <td>Must</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>Repository Browsing</td>
+                <td>The Repository  shall display a list of highly associated Terms for a specific Movie.</td>
+                <td>Functional</td>
+                <td>Must</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>Repository Browsing</td>
+                <td>The Repository shall display a list of all Components for a specific Movie.</td>
+                <td>Functional</td>
+                <td>Must</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>13 </td>
+                <td>Repository Browsing</td>
+                <td>The Repository shall display the 3-axis average image of all Components for a specific Term for a specific Movie.</td>
+                <td>Functional</td>
+                <td>Must</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>14</td>
+                <td>Repository Browsing</td>
+                <td>The Repository shall display a list of all Components for a specific Term for a specific Movie.</td>
+                <td>Functional</td>
+                <td>Must</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>15</td>
+                <td>Repository Browsing</td>
+                <td>The Repository shall display a list of all Movies associated with specific Terms.</td>
+                <td>Functional</td>
+                <td>Must</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>16</td>
+                <td>Repository Browsing</td>
+                <td>The Repository shall display an option to view selected Termfor all Movies.
+                </td>
+                <td>Functional</td>
+                <td>Must</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>17</td>
+                <td>Repository Browsing</td>
+                <td>The Repository shall display the 3-axis image of specific Component for a specific Movie.</td>
+                <td>Functional</td>
+                <td>Must</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>18</td>
+                <td>Repository Browsing</td>
+                <td>The Repository shall display a list of Terms available for a specific Component for a specific Movie.</td>
+                <td>Functional</td>
+                <td>Must</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>19</td>
+                <td>Repository Browsing</td>
+                <td>The Repository shall display a list of all Terms matched to any Component in the Datasetbase.</td>
+                <td>Functional</td>
+                <td>Must</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>20</td>
+                <td>Repository Browsing</td>
+                <td>The repository shall display the average image of all Components for a specific Term for all Movies.</td>
+                <td>Functional</td>
+                <td>Must</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>21</td>
+                <td>Repository Browsing</td>
+                <td>The Repository shall display a questions and answers layout explaining How to use, Terms and Components.</td>
+                <td>Functional</td>
+                <td>Must</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>22</td>
+                <td>Data Submission</td>
+                <td>The Repository shall allow User to upload their Raw Datasetset to the server.</td>
+                <td>Functional</td>
+                <td>Must</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>23</td>
+                <td>Data Submission</td>
+                <td>The Repository shall allow User to upload multiple files.</td>
+                <td>Functional</td>
+                <td>Must</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>24</td>
+                <td>Data Submission</td>
+                <td>The Repository shall allow User to the describe the files to be uploaded.</td>
+                <td>Functional</td>
+                <td>Must</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>25</td>
+                <td>Data Submission</td>
+                <td>The Repository shall ensure that the upload process is reliable with more than 95% success rate.</td>
+                <td>Non-functional</td>
+                <td>Could</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>26</td>
+                <td>Data Submission</td>
+                <td>The Repository shall display an FAQ for questions that might arise with regard to collecting the Raw Datasetset.</td>
+                <td>Functional</td>
+                <td>Must</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>27</td>
+                <td>Data Submission</td>
+                <td>The Repository shall allow User to input Essentials information of the Raw Dataset.</td>
+                <td>Functional</td>
+                <td>Must </td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>28</td>
+                <td>Data Submission</td>
+                <td>The Repository shall allow User to input Participants information of the Raw Dataset.</td>
+                <td>Functional</td>
+                <td>Must</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>29</td>
+                <td>Data Submission</td>
+                <td>The Repository shall allow User to input Design information of the Raw Dataset.</td>
+                <td>Functional</td>
+                <td>Must</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>30</td>
+                <td>Data Submission</td>
+                <td>The Repository shall allow User to input Acquisition information of the Raw Dataset.</td>
+                <td>Functional</td>
+                <td>Must</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>31</td>
+                <td>Data Submission</td>
+                <td>The Repository shall allow User to input Movie information of the Raw Datasetset.</td>
+                <td>Functional</td>
+                <td>Must</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>32</td>
+                <td>Data Submission</td>
+                <td>The Repository shall display an animated progress bar and percentage during the uploading process.</td>
+                <td>Functional</td>
+                <td>Must</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>33</td>
+                <td>Data Submission</td>
+                <td>The Repository shall display a warning dialog when User try to close the page when the uploading process is ongoing.</td>
+                <td>Functional</td>
+                <td>Must</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>34</td>
+                <td>Data Submission</td>
+                <td>The Repository shall display a list of User&rsquo;s uploaded Raw Datasetsets.</td>
+                <td>Functional</td>
+                <td>Must</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>35</td>
+                <td>Data Submission</td>
+                <td>The Repository shall display information of the Datasetset.</td>
+                <td>Functional</td>
+                <td>Must</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>36 </td>
+                <td>Data Submission</td>
+                <td>The Repository shall display a disclaimer policy on Dataset collected.</td>
+                <td>Functional</td>
+                <td>Must</td>
+                <td>All</td>
+                </tr>
+              <tr>
+                <td>37</td>
+                <td>Data Submission</td>
+                <td>The Repository shall allow User to delete his/her uploaded Datasetsets during a grace period of 24 hours.</td>
+                <td>Functional</td>
+                <td>Must</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>38</td>
+                <td>Data Submission</td>
+                <td>The Repository shall display a warning dialog when User try todelete a Datasetset.</td>
+                <td>Functional</td>
+                <td>Must</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>39</td>
+                <td>User Management</td>
+                <td>The Repository shall allow User to register an account with email, initial, first and last name.</td>
+                <td>Functional</td>
+                <td>Must</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>40</td>
+                <td>User Management</td>
+                <td>The Repository shall allow User to login and logout.</td>
+                <td>Functional</td>
+                <td>Must</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>41</td>
+                <td>User Management</td>
+                <td>The Repository shall allow User to reset password.</td>
+                <td>Functional</td>
+                <td>Must</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>42</td>
+                <td>User Management</td>
+                <td>The Repository shall allow User to change password.</td>
+                <td>Functional</td>
+                <td>Must</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>43</td>
+                <td>User Management</td>
+                <td>The Repository shall allow User to delete account.</td>
+                <td>Functional</td>
+                <td>Should</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>44</td>
+                <td>User Management</td>
+                <td>The Repository shall allow User to edit initial.</td>
+                <td>Functional</td>
+                <td>Must</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>45</td>
+                <td>User Management</td>
+                <td>The Repository shall allow User to edit first and last name.</td>
+                <td>Functional</td>
+                <td>Must</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>46</td>
+                <td>User Management</td>
+                <td>The Repository shall allow User to add affiliation.</td>
+                <td>Functional</td>
+                <td>Must</td>
+                <td>All</td>
+              </tr>
+              <tr>
+                <td>47</td>
+                <td>Admin</td>
+                <td>The Repository shall allow administrator to download Raw Datasetset using command line.</td>
+                <td>Functional</td>
+                <td>Must</td>
+                <td>Admin</td>
+                </tr>
+              <tr>
+                <td>48</td>
+                <td>Admin</td>
+                <td>The Repository shall allow administrator to upload Processed Dataset using command line.</td>
+                <td>Functional</td>
+                <td>Must</td>
+                <td>Admin</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div><!-- #requirements -->
+
+      <div id="usecases" role="tabpanel" class="tab-pane fade in">
+        <h2 class="title_body" style="font-weight:800">Use Cases</h2>
+        <p class="body_text">We have written a list of basic and crticial use cases for our project. This list is subject to change during the development process.</p>
+        <div class="table-responsive">  
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+                <th width="5%">ID</th>
+                <th>Use Case</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Register an Account</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Login</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Logout</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>View Movie</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>View Term for a specific Movie</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>View Term for all Movies</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>View Component</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Upload Raw Dataset</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>View Uploaded Raw Dataset Informationi</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>Edit Uploaded Raw Dataset Information</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-responsive">
+          <table class="table table-striped table-bordered">
+            <tbody>
+              <tr>
+                <th width="20%">Use Case</th>
+                <td>1: Register an Account</td>
+              </tr>
+              <tr>
+                <th>Primary Actors</th>
+                <td>Neuroscientist User</td>
+              </tr>
+              <tr>
+                <th>Secondary Actors</th>
+                <td>None</td>
+              </tr>
+              <tr>
+                <th>Preconditions</th>
+                <td>Actor not logged in, does not have an account</td>
+              </tr>
+              <tr>
+                <th>Main Flow</th>
+                <td>
+                  1. Click "Register" from navigation bar<br>
+                  2. Enter personal information<br>
+                  3. Click "Submit" button
+                </td>
+              </tr>
+              <tr>
+                <th>Post Conditions</th>
+                <td>New account registered, logged in, return to "My Collections" page</td>
+              </tr>
+              <tr>
+                <th>Alternative Flows</th>
+                <td>
+                  Failed to register new account, error message(s) shown on same page<br>
+                  A) Duplicate email.<br>
+                  B) Field(s) left blank.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-responsive">
+          <table class="table table-striped table-bordered">
+            <tbody>
+              <tr>
+                <th width="20%">Use Case</th>
+                <td>2: Login</td>
+              </tr>
+              <tr>
+                <th>Primary Actors</th>
+                <td>Neuroscientist User</td>
+              </tr>
+              <tr>
+                <th>Secondary Actors</th>
+                <td>None</td>
+              </tr>
+              <tr>
+                <th>Preconditions</th>
+                <td>Actor not logged in, owns an account</td>
+              </tr>
+              <tr>
+                <th>Main Flow</th>
+                <td>
+                  1. Click "Login" from navigation bar<br>
+                  2. Enter Login information<br>
+                  3. Click "Login" button
+                </td>
+              </tr>
+              <tr>
+                <th>Post Conditions</th>
+                <td>Actor logged in, return to "My Collections" page</td>
+              </tr>
+              <tr>
+                <th>Alternative Flows</th>
+                <td>
+                  Invalid Login, error message shown on same page<br>
+                  "Invalid Login, please login using registered email address and password, or register"
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-responsive">
+          <table class="table table-striped table-bordered">
+            <tbody>
+              <tr>
+                <th width="20%">Use Case</th>
+                <td>3: Logout</td>
+              </tr>
+              <tr>
+                <th>Primary Actors</th>
+                <td>Neuroscientist User</td>
+              </tr>
+              <tr>
+                <th>Secondary Actors</th>
+                <td>None</td>
+              </tr>
+              <tr>
+                <th>Preconditions</th>
+                <td>Actor logged in</td>
+              </tr>
+              <tr>
+                <th>Main Flow</th>
+                <td>
+                  1. Click "User" on navigation bar<br>
+                  2. Click "Logout" from drop down menu
+                </td>
+              </tr>
+              <tr>
+                <th>Post Conditions</th>
+                <td>Return to home page, logged out</td>
+              </tr>
+              <tr>
+                <th>Alternative Flows</th>
+                <td>None</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-responsive">
+          <table class="table table-striped table-bordered">
+            <tbody>
+              <tr>
+                <th width="20%">Use Case</th>
+                <td>4: View Movie</td>
+              </tr>
+              <tr>
+                <th>Primary Actors</th>
+                <td>Neuroscientist User, Public User</td>
+              </tr>
+              <tr>
+                <th>Secondary Actors</th>
+                <td>None</td>
+              </tr>
+              <tr>
+                <th>Preconditions</th>
+                <td>None</td>
+              </tr>
+              <tr>
+                <th>Main Flow</th>
+                <td>
+                  Select Movie<br>
+                  1. From "latest Movies" list on Home page<br>
+                  2. OR from list on "Movies" page
+                </td>
+              </tr>
+              <tr>
+                <th>Post Conditions</th>
+                <td>View page for selected Movie</td>
+              </tr>
+              <tr>
+                <th>Alternative Flows</th>
+                <td>None</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-responsive">
+          <table class="table table-striped table-bordered">
+            <tbody>
+              <tr>
+                <th width="20%">Use Case</th>
+                <td>5: View Term for a specific Movie</td>
+              </tr>
+              <tr>
+                <th>Primary Actors</th>
+                <td>Neuroscientist User, Public User</td>
+              </tr>
+              <tr>
+                <th>Secondary Actors</th>
+                <td>None</td>
+              </tr>
+              <tr>
+                <th>Preconditions</th>
+                <td>None</td>
+              </tr>
+              <tr>
+                <th>Main Flow</th>
+                <td>
+                  1. View Movie<br>
+                  2. From list of Terms under the "Terms" tab, select a Term
+                </td>
+              </tr>
+              <tr>
+                <th>Post Conditions</th>
+                <td>On page for selected Term in selected Movie</td>
+              </tr>
+              <tr>
+                <th>Alternative Flows</th>
+                <td>None</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-responsive">
+          <table class="table table-striped table-bordered">
+            <tbody>
+              <tr>
+                <th width="20%">Use Case</th>
+                <td>6: View Term for all Movies</td>
+              </tr>
+              <tr>
+                <th>Primary Actors</th>
+                <td>Neuroscientist User, Public User</td>
+              </tr>
+              <tr>
+                <th>Secondary Actors</th>
+                <td>None</td>
+              </tr>
+              <tr>
+                <th>Preconditions</th>
+                <td>None</td>
+              </tr>
+              <tr>
+                <th>Main Flow</th>
+                <td>
+                  1. Select "Terms" tab on navigation bar<br>
+                  2. Select a Term from list of Terms<br>
+                  OR<br>
+                  1. View Term for Specific Movie<br>
+                  2. Click "View (term) in all Movies"
+                </td>
+              </tr>
+              <tr>
+                <th>Post Conditions</th>
+                <td>On page for selected term in all Movies</td>
+              </tr>
+              <tr>
+                <th>Alternative Flows</th>
+                <td>None</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-responsive">
+          <table class="table table-striped table-bordered">
+            <tbody>
+              <tr>
+                <th width="20%">Use Case</th>
+                <td>7: View Component</td>
+              </tr>
+              <tr>
+                <th>Primary Actors</th>
+                <td>Neuroscientist User, Public User</td>
+              </tr>
+              <tr>
+                <th>Secondary Actors</th>
+                <td>None</td>
+              </tr>
+              <tr>
+                <th>Preconditions</th>
+                <td>None</td>
+              </tr>
+              <tr>
+                <th>Main Flow</th>
+                <td>
+                  1. View Movie<br>
+                  2. From list of Components under "Components" tab, select a Component<br>
+                  OR<br>
+                  1. View Term (either for specific Movie or all Movies)<br>
+                  2. From list of Components under "Components" tab, select a Component
+                </td>
+              </tr>
+              <tr>
+                <th>Post Conditions</th>
+                <td>On page for selected Component</td>
+              </tr>
+              <tr>
+                <th>Alternative Flows</th>
+                <td>None</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-responsive">
+          <table class="table table-striped table-bordered">
+            <tbody>
+              <tr>
+                <th width="20%">Use Case</th>
+                <td>8: Upload Raw Dataset</td>
+              </tr>
+              <tr>
+                <th>Primary Actors</th>
+                <td>Neuroscientist User</td>
+              </tr>
+              <tr>
+                <th>Secondary Actors</th>
+                <td>None</td>
+              </tr>
+              <tr>
+                <th>Preconditions</th>
+                <td>Logged In</td>
+              </tr>
+              <tr>
+                <th>Main Flow</th>
+                <td>
+                  1. Click "Contribute" tab on navigation bar<br>
+                  2. Click "Choose file" button<br>
+                  3. Choose File(s) from computer<br>
+                  4. Fill in fields for information about contribution<br>
+                  5. Click "Submit" button<br>
+                  6. Read through disclaimer / terms &amp; condition, click "Confirm"
+                </td>
+              </tr>
+              <tr>
+                <th>Post Conditions</th>
+                <td>New Dataset uploaded, pending analysis</td>
+              </tr>
+              <tr>
+                <th>Alternative Flows</th>
+                <td>
+                  1. Data not uploaded<br>
+                  2. Return to "Contribute" page
+              </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-responsive">
+          <table class="table table-striped table-bordered">
+            <tbody>
+              <tr>
+                <th width="20%">Use Case</th>
+                <td>9: View Uploaded Raw Dataset Information</td>
+              </tr>
+              <tr>
+                <th>Primary Actors</th>
+                <td>Neuroscientist User</td>
+              </tr>
+              <tr>
+                <th>Secondary Actors</th>
+                <td>None</td>
+              </tr>
+              <tr>
+                <th>Preconditions</th>
+                <td>Logged In, Uploaded Dataset previously</td>
+              </tr>
+              <tr>
+                <th>Main Flow</th>
+                <td>
+                  1. Click (user's name) tab<br>
+                  2. From drop-down menu click "My Collections"<br>
+                  3. From list of uploaded Dataset, select one
+                </td>
+              </tr>
+              <tr>
+                <th>Post Conditions</th>
+                <td>On page with information about uploaded Dataset</td>
+              </tr>
+              <tr>
+                <th>Alternative Flows</th>
+                <td>None</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-responsive">
+          <table class="table table-striped table-bordered">
+            <tbody>
+              <tr>
+                <th width="20%">Use Case</th>
+                <td>10: Edit Uploaded Raw Dataset Information</td>
+              </tr>
+              <tr>
+                <th>Primary Actors</th>
+                <td>Neuroscientist User</td>
+              </tr>
+              <tr>
+                <th>Secondary Actors</th>
+                <td>None</td>
+              </tr>
+              <tr>
+                <th>Preconditions</th>
+                <td>Logged In, Uploaded Dataset previously</td>
+              </tr>
+              <tr>
+                <th>Main Flow</th>
+                <td>
+                  1. View Uploaded Raw Dataset Information<br>
+                  2. Click "Edit Information"<br>
+                  3. On editing page, update any fields that requires new information<br>
+                  4. Click "Submit"
+                </td>
+              </tr>
+              <tr>
+                <th>Post Conditions</th>
+                <td>On page with updated information about uploaded Dataset</td>
+              </tr>
+              <tr>
+                <th>Alternative Flows</th>
+                <td>Return to information page without updated information</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div><!-- #usecases -->
+
+      <div id="glossary" role="tabpanel" class="tab-pane fade in">
+        <h2 class="title_body">Glossary</h2>
+        <p class="body_text">We build a Glossary of Terms to define vocublary for the project so that the team and the client uses the same definition during the discussion of the project.</p>
+        <div class="table-responsive">
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+                <td>Term</td>
+                <td>Definition</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Term</td>
+                <td>The keyword that describe the brain activation.</td>
+              </tr>
+              <tr>
+                <td>Component</td>
+                <td>An analysed image that contain the x-y-z axis of a dataset.</td>
+              </tr>
+              <tr>
+                <td>Repository or INcDb</td>
+                <td>The web application that will be publically available.</td>
+              </tr>
+              <tr>
+                <td>Processed Dataset</td>
+                <td>The set of files that are produced after our client has run the analysis process on the Raw Dataset.</td>
+              </tr>
+              <tr>
+                <td>Raw Dataset</td>
+                <td>The set of brain images collected by researcher when someone watch a movie.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div><!-- tab-content -->
+
+
+
+  </div><!-- body_content -->
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+  <script src="../js/bootstrap.js"></script> <!-- IE10 viewport hack for Surface/desktop Windows 8 bug --> 
+  <script src="../../assets/js/ie10-viewport-bug-workaround.js"> </script>
+
+
+</body>
+</html>
