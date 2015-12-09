@@ -69,42 +69,64 @@
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" role="tablist" style="margin-top:30px;">
       <li role="presentation" class="active"><a href="#research" aria-controls="home" role="tab" data-toggle="tab">Research</a></li>
-      <li role="presentation"><a href="#prototype" aria-controls="profile" role="tab" data-toggle="tab">Design Prototype</a></li>
-      <li role="presentation"><a href="#experiment" aria-controls="profile" role="tab" data-toggle="tab">Experiment</a></li>
+      <li role="presentation"><a href="#uidesign" aria-controls="profile" role="tab" data-toggle="tab">UI Design</a></li>
+      <li role="presentation"><a href="#prototype" aria-controls="profile" role="tab" data-toggle="tab">Prototype</a></li>
       <li role="presentation"><a href="#testing" aria-controls="profile" role="tab" data-toggle="tab">Testing</a></li>
     </ul>
 
     <div class="tab-content">
       <div id="research" role="tabpanel" class="tab-pane fade in active">
 
+         <h2 class="title_body">Research</h2>
+         <p class="body_text">This page details the research done by the group to understand the problem of the project and the suitable technologies required to build the solution.</p>
+
+        <h2 class="title_body">Background Research: NeuroVault &amp; Neurosynth</h2>
+
+        <p class="body_text">There are two open source websites, <a href="http://www.neurovault.org/">NeuroVault</a> and <a href="http://www.neurosynth.org/">Neurosynth</a>, that are widely used by neuroscience researchers. NeuroVault is a public repository for brain images supported by International Neuroinformatics Coordinating Facility, Max Planck Institute for Human Cognitive and Brain Sciences and Stanford University. Neurosynth is a platform that automate the process of producing functional magnetic resonance imaging (fMRI) data. Neurosynth process the data collected from numerous neuroimaging studies and does a meta-analysis on the coordinates in each study. The result is a images with a list of Terms that it is highly associated with.</p>
+
+        <p class="body_text">As our client has developed a new study on capturing brain data while a person watch a movie, he want to build a public database that is similar to NeuroVault and Neurosynth. The database is a combination of both sites as it should allow users to interact with the brain image and view the list of Terms that it is highly associated with and at the same time allow other neuroscience researchers to upload their data for similar study</p>
+
+        <p class="body_text"><strong>Steep Learning Curve</strong><br> As the 2 websites contain a high-level of technical details, we find that the learning curve to the use the website to be steep. It is important to keep in mind that our site should also be usable by the public with minimal technical knowledge, thus we will be replacing majority of the technical terms with simpler words.</p>
+
+        <p class="body_text"><strong>Open Source</strong><br>Both websites are open sourced. Being open source allows other developers to contribute fixes and features to the application. It is an effective way of improving and maintaing a not-for-profit website.</p>
+
+
         <h2 class="title_body">Version Control: Git &amp; GitHub</h2>
 
         <div class="banner_image" style="text-align:center;background:#f1f1f1;padding:30px 0;margin-bottom:10px;">
-        <img src="../images/github_logo.png" style="width:30%;">
+          <img src="../images/github_logo.png" style="width:30%;">
         </div>
 
-        <p class="body_text">We decided to use Git for our version control system. We will be using GitHub, to host all our source codes (<a href="https://github.com/UCL-CS35">https://github.com/UCL-CS35</a>).</p>
-        <p class="body_text">We will be adopting <a href="http://nvie.com/posts/a-successful-git-branching-model/">Git Flow</a> for our Git branching model. In our central repo, origin, we will have 2 main branches with infinite lifetime: master and develop. The origin/master always reflect a production-ready state. The origin/develop always reflect a state with the latest delivered development changes for the next release.</p>
-        <p class="body_text">When origin/develop branch is ready to be release, all of the changes will be merged back into origin/master and then tagged with a release number. Each time when changes are merged back into origin/master, we will automatically build and roll-out our software to our production servers.</p>
-        <p class="body_text">We will be using three supporting branches, namely Feature, Release, Hotfix branches.Feature branches may branch off from: develop, must merge back into: develop, has a branch naming convention: anything except master, develop, release-*, or hotfix-*. Feature branches are used to develop new features for the future release. Feature branches exist in developer repos only, not in origin.</p>
+        <p class="body_text">We will be using Git for our version control system.</p>
+
+        <p class="body_text">We shortlisted GitHub and Bitbucket as the possible options for hosting our project source codes. Bitbucket is an hosting service for Git repositories. It is attractive to small group (up to 5 members) who want to host their private projects online. GitHub is another hosting service provider but their free plan requires group to keep their code public. As our project's aim is to make a research study available to the public, our client has no objection on keeping the source code public. By having a public repository, interested developers can submit fixes or new features to improve INcDb. Lastly, GitHub is a also a better option for beginners like us as there is a huge community support available. We decided to use GitHub to host all our source codes and they are available at <a href="https://github.com/UCL-CS35">https://github.com/UCL-CS35</a>.</p>
+
+        <p class="body_text">We will be adopting <a href="http://nvie.com/posts/a-successful-git-branching-model/">Git Flow</a> for our Git branching model. In our central repo, origin, we will have 2 main branches with infinite lifetime: master and develop. The <code>origin/master</code> always reflect a production-ready state. The <code>origin/develop</code> always reflect a state with the latest delivered development changes for the next release.</p>
+
+        <p class="body_text">When <code>origin/develop</code> branch is ready to be release, all of the changes will be merged back into <code>origin/master</code> and then tagged with a release number. Each time when changes are merged back into <code>origin/master</code>, we will automatically build and roll-out our software to our production servers.</p>
+
+        <p class="body_text">We will be using three supporting branches, namely Feature, Release, Hotfix branches. Feature branches may branch off from: <code>develop</code>, must merge back into: <code>develop</code>, has a branch naming convention: anything except <code>master</code>, <code>develop</code>, <code>release-*</code>, or <code>hotfix-*</code>. Feature branches are used to develop new features for the future release. Feature branches exist in developer repos only, not in origin.</p>
 
         <h2 class="title_body">Web Framework: Python Flask</h2>
 
         <div class="banner_image" style="text-align:center;background:#f1f1f1;padding:30px 0;margin-bottom:10px;">
-        <img src="../images/flask.png" style="width:30%;">
+          <img src="../images/flask.png" style="width:30%;">
         </div>
 
-        <p class="body_text">Our client requested the team to build a website similar to the one found on <a href="http://www.neurosynth.org">Neurosynth</a> which uses the web framework, Python Flask. Our team decided to select Flask as our framework as we try to emulate a repository similar to Neurosynth. Besides having the same framework as the website we are going to emulate, Flask which is written in Python allows the team to learn more about Python, which is also the language for most of the tools that are used to process the collected brain images.</p>
+        <p class="body_text">Our client requested the group to build a website similar to the one found on <a href="http://www.neurosynth.org">Neurosynth</a> which uses the web framework, Python Flask. Our group decided to select Flask as our framework as we try to emulate a repository similar to Neurosynth. By using Flask, which is written in Python, it allows the group to learn more about Python, which is also the language for most of the tools that are used to process the collected brain images.</p>
 
-        <p class="body_text">Flask is a Python micro web framework based on Werkzeug and Jinja2 (<a href="http://flask.pocoo.org/">http://flask.pocoo.org/</a>), that has a file structure (<a href="http://damyanon.net/flask-series-structure/">http://damyanon.net/flask-series-structure/</a>) that contains a folder named bin – contains scripts that will be executed on the command line, a folder named docs – contains project related documentation files, a folder named tests – contains unit tests, a folder named [app-name] – contains the application itself, and a file named run.py – used to run the Flask application.</p>
-        <p class="body_text">Inside the application folder, there will be different modules as the application is configured to be modular, based on the blueprint concept in Flask. Inside each module folder, there will be a _init_.py file which initialize the folder as Python package. These modules will be register by using the method app.register_blueprint([module-name], url_prefix='/') in the application object, [app-name]/_init_.py.</p>
+        <p class="body_text">Flask is a Python micro web framework based on Werkzeug and Jinja2 (<a href="http://flask.pocoo.org/">http://flask.pocoo.org/</a>), that has a file structure (<a href="http://damyanon.net/flask-series-structure/">http://damyanon.net/flask-series-structure/</a>) that contains a folder named <code>bin</code> – contains scripts that will be executed on the command line, a folder named docs – contains project related documentation files, a folder named tests – contains unit tests, a folder named [app-name] – contains the application itself, and a file named <code>run.py</code> – used to run the Flask application.</p>
+
+        <p class="body_text">Inside the application folder, there will be different modules as the application is configured to be modular, based on the blueprint concept in Flask. Inside each module folder, there will be a _init_.py file which initialize the folder as Python package. These modules will be register by using the method <code>app.register_blueprint([module-name], url_prefix='/')</code> in the application object, <code>[app-name]/_init_.py</code>.</p>
 
         <h3 class="title_body">Flask Extensions</h3>
+
         <p class="body_text">In order to speed up our development process, we will be using a few Flask Extensions, which are Python packages that add new function to the Flask app.</p>
+
         <div class="table-responsive">    
           <table class="table table-striped table-bordered">
             <tr>
-              <th>Name</th>
+              <th width="15%">Name</th>
               <td><a href="https://github.com/mitsuhiko/flask-sqlalchemy">SQLAlchemy (via Flask-SQLAlchemy)</a></td>
             </tr>
             <tr>
@@ -121,10 +143,11 @@
             </tr>
           </table>
         </div>
+
         <div class="table-responsive">    
           <table class="table table-striped table-bordered">
             <tr>
-              <th>Name</th>
+              <th width="15%">Name</th>
               <td><a href="https://github.com/lingthio/Flask-User">Flask-User</a></td>
             </tr>
             <tr>
@@ -142,22 +165,90 @@
           </table>
         </div>
 
+        <div class="table-responsive">    
+          <table class="table table-striped table-bordered">
+            <tr>
+              <th><a href="https://github.com/miguelgrinberg/Flask-Migrate">Flask-Migrate</a></th>
+              <td>SQLAlchemy database migrations for Flask applications using Alembic</td>
+            </tr>
+            <tr>
+              <th><a href="https://github.com/lepture/flask-wtf">Flask-WTF</a></th>
+              <td>Simple integration of Flask and WTForms, including CSRF, file upload and Recaptcha integration</td>
+            </tr>
+            <tr>
+              <th><a href="https://github.com/FelixLoether/flask-uploads">Flask-Uploads</a></th>
+              <td>A Flask extension to help you add file uploading functionality to your site.</td>
+            <tr>
+              <th><a href="https://github.com/mattupstate/flask-mail">Flask-Mail</a></th>
+              <td>Flask-Mail adds SMTP mail sending to your Flask applications</td>
+            </tr>
+          </table>
+        </div>
+
         <h2 class="title_body">Frontend: Bootstrap</h2>
+
         <div class="banner_image" style="text-align:center;color:#fff;background-color:#563d7c;padding:30px 0;margin-bottom:10px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:60px;">
           Bootstrap
         </div>
 
-        <p class="body_text">To create the front-end of our user interface, we will be using the <a href="http://getbootstrap.com/">Bootstrap</a> framework, developed by Twitter. Boostrap is an UI framework which provide a set of UI components for modern web application. We can intergrate this framework into our appliation by adding its custom CSS and Javascript files into our application directory. This CSS and Javascript will be applied to the HTML elements with the pre-defined classes to acheive a standardised modern visual appearance. </p>
+        <div class="table-responsive"> 
+          <table class="table table-striped table-bordered">
+            <tr>
+              <th width="10%">Frameworks</th>
+              <td width="45%"><a href="http://getbootstrap.com/">Bootstrap</a></td>
+              <td width="45%"><a href="http://www.getmdl.io/">Material Design Lite</a></td>
+            </tr>
+            <tr>
+              <th>Strength</th>
+              <td>
+                <ul>
+                  <li>Components include panel, popover, breadcrumb, thumbnails, inline alerts and wells.</li>
+                  <li>A lot of extensions and third-party widgets are available for Bootstrap </li>
+                  <li>Supports all the major browsers</li>
+                </td>
+              <td>
+                <ul>
+                  <li>Components include cards, mega footer, slider inputs and toggle switches</li>
+                  <li>No external dependencies</li>
+                  <li>Smaller file size</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>Weakness</th>
+              <td>
+                <ul>
+                  <li><a href="https://jquery.com/">jQuery</a> dependency</li>
+                  <li>Need <a href="https://github.com/scottjehl/Respond">Respond.js</a> polyfill for CSS3 Media-queries support</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Follows stricter pattern of <a href="http://www.google.com/design/spec/">Material Design Concept</a></li>
+                  <li>Customisation might lead to a lost of the concept of Material Design</li>
+                  <li>Less number of extensions available</li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <p class="body_text">We shortlisted Bootstrap and Material Design Lite for the front-end framework. We decided to use the <a href="http://getbootstrap.com/">Bootstrap</a> framework, originally developed by Twitter, because Bootstrap allow a greater scale of customisation and is a mature framework that has extensive support available. With detailed documentation, it is easy to copy paste from the examples and get a usable result fast for Bootstrap.</p>
+
+        <p class="body_text">Boostrap is an UI framework which provide a set of UI components for modern web application with the purpose of making it easy to build responsive websites. We can intergrate this framework into our appliation by adding its custom CSS and Javascript files into our application directory. This CSS and Javascript will be applied to the HTML elements with the pre-defined classes to acheive a standardised modern visual appearance. </p>
 
         <h2 class="title_body">Neurosynth Viewer (Open Source)</h2>
 
-        <p class="body_text">Neurosynth Viewer is a CoffeeScript/JS library for visualization of functional MRI data. It provides us with a simple tools to display the brain scan image and  navigation sliders to surf through a single plane. The documentation of the library is extensive and easy to implement.
+        <p class="body_text">Neurosynth Viewer is a CoffeeScript/JS library for visualization of functional MRI data. It provides us with a simple tools to display the brain scan image and  navigation sliders to surf through a single plane. The documentation of the library is extensive and easy to implement.</p>
 
-        <p class="body_text">Demo: <a href="http://pilab.psy.utexas.edu/demos/nsviewer/index.html">http://pilab.psy.utexas.edu/demos/nsviewer/index.html</a><br>
-        Source: <a href="https://github.com/neurosynth/nsviewer">https://github.com/neurosynth/nsviewer</a></p>
+        <p class="body_text">
+          <strong>Demo:</strong> <a href="http://pilab.psy.utexas.edu/demos/nsviewer/index.html">http://pilab.psy.utexas.edu/demos/nsviewer/index.html</a><br>
+          <strong>Source</strong>: <a href="https://github.com/neurosynth/nsviewer">https://github.com/neurosynth/nsviewer</a>
+        </p>
 
 
         <h2 class="title_body">Deployment</h2>
+
         <p class="body_text">As our web application will be using the Python Flask Framework, the deployment server/service we will be using must support Python Flask applications. To deploy our web application, we could use a server provided by UCL or a cloud service.</p>
 
         <ol type="1" class="body_text">
@@ -167,8 +258,7 @@
           <li>Microsoft Azure is another cloud hosting platform which may be considered. One of its features is the access to a large number of APIs, connecting to other services is easier. It also supports "continuous integration", so pushes to GitHub can be automatically built, tested and deployed.</li>
         </ol>
 
-
-        <p class="body_text">As our client does not have any prior knowledge of the deployment services available, he requested the team for a summary of the services. We researched on the three services, Heroku, Digtial Ocean and Microsoft Azure and comipled the information into the table below. We are in the midst of dicsussion with our client on the final decision on the deployment service that he will be purchasing and a detailed study on the selected service will be done once the decision is made.</p>
+        <p class="body_text">As our client does not have any prior knowledge of the deployment services available, he requested the group for a summary of the services. We researched on the three services, Heroku, Digtial Ocean and Microsoft Azure and comipled the information into the table below.</p>
 
         <div class="table-responsive">
           <table class="table table-striped table-bordered">
@@ -282,11 +372,68 @@
           </tbody>
           </table>
         </div>
+
+        <p class="body_text">We reach an agreement with our client to select Heroku. We choose Heroku because it offer a Free plan that will reduce the cost required during the development stage. As Heroku also provide a url for the web application deployed on the free plan, our client dose not need to purchase the domain name before INcDb is ready to go live. The restriction of 6 hours of downtime is not critical during the development stage too.</p>
+
+        <h3 class="title_body">Deployment on Heroku</h3>
+
+        <p class="body_text">Having identify Heroku as our hosting platfrom, we look in the tools to deploy on Heroku and scripts required to automate the process.</a></p>
+
+        <p class="body_text"><strong><a href="https://toolbelt.heroku.com/">Heroku Client</a></strong><br>A client tool to create and manage our application. After downloading and installing the tool, we need to login using our Heroku account via the terminal.</a></p>
+
+        <p class="body_text">With Heroku Client setup, we can create a new Heroku app use the <code>create</code> command from the root directory of the application. The create <code>command</code> will return a url for the app and add a git remote to our <code>git</code> repository that we will upload our application to.</p>
+
+<pre>
+$ heroku apps:create incdb
+Creating incdb... done, stack is cedar
+http://incdb.herokuapp.com/ | git@heroku.com:incdb.git
+</pre>
+
+        <p class="body_text"><strong>Web Server: <a href="http://gunicorn.org/">gunicorn</a></strong><br>As Heroku does not provide a web server and the Flask web server having a single process and being single threaded, we need a better web server like <code>gunicorn</code>.</p>
+
+        <p class="body_text"><strong>Procfile</strong><br>The <code>Procfile</code> is a file that tells Heroku how to run the application. We will use it to define the process and commands associated with them.</p>
+
+<pre>
+web: gunicorn app:app
+init: python db_create.py
+upgrade: python db_upgrade.py
+</pre>
+
+      <p class="body_text">The other two tasks, named init and upgrade are custom tasks that we will use to work with our application. The init task initializes our application by creating the database. The upgrade task upgrades the database to the latest migration.</p>
+
+      <p class="body_text"><strong>Deploying the application</strong><br>To deploy the application, we use <code>git</code> to push the application.</p>
+
+<pre>
+$ git push heroku master
+</pre>
+
+      <p class="body_text">The label <code>heroku</code> signal to git to push the application to the Heroku <code>git</code> repository, which is created using the <code>heroku create</code> command.</p>
+
+      <p class="body_text">After pushing the application to Heroku for the first time, we need to initialise the database by executing the <code>init</code> task in our <code>Procfile</code></p>
+
+<pre>
+$ heroku run init
+</pre>
+
+      <p class="body_text"><strong>Updating the application</strong><br>To update the application with the latest build, we use the same <code>git push</code> method like the initial deployment.</p>
+
+<pre>
+$ git push heroku master
+</pre>
+      
+      <p class="body_text">And we run the upgrade script to upgrade the database to the latest migration.</p>
+
+<pre>
+$ heroku run upgrade
+</pre>
+
+
       </div><!-- #research -->
 
-      <div id="prototype" role="tabpanel" class="tab-pane fade in">
+      <div id="uidesign" role="tabpanel" class="tab-pane fade in">
         <h2 class="title_body">Stage 1: Sketches</h2>
-        <p class="body_text">After our first meeting with Dr.Skipper, we decided that each team member need to spring up their own interpretation of the design for the website with a simple sketch. We would then discuss on the ideas and objectives we had in mind from these drawings and upon these sketches, we would build a basic foundation for the website. The followings are our sketches for the project. They include flowchart of the application and logo for the project.</p>
+        <p class="body_text">After our first meeting with Dr.Skipper, we decided that each group member need to spring up their own interpretation of the design for the website with a simple sketch. We would then discuss on the ideas and objectives we had in mind from these drawings and upon these sketches, we would build a basic foundation for the website. The followings are our sketches for the project. They include flowchart of the application and logo for the project.</p>
+
         <div class="row">
           <div class="col-xs-6">
             <a href="#" class="thumbnail">
@@ -318,6 +465,19 @@
             </a>
           </div>
         </div>
+
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="thumbnail">
+              <img src="../images/flowchart.jpg">
+              <div class="caption">
+                <h3>Flowchart (<a href="../images/flowchart.jpg">View Image</a>)</h3>
+                <p>We created a flowchart to describe the steps and orders involved for INcDb based on our initial sketches. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="row">
           <div class="col-xs-12">
             <div class="thumbnail">
@@ -330,8 +490,9 @@
           </div>
         </div>
 
+
         <h2 class="title_body">Stage 2: Wireframe</h2>
-        <p class="body_text">After a team discussion on our sketches, we decided to implement these ideas to create a simple flow chart of the website. We wanted to develop a better understanding to how we, as users of the website, would get around. That’s why we constructed a simple wireframe using the sketches to build a simple user interface using flowchart software (<a href="http://www.draw.io">draw.io</a>), and outline of the website. The astehetic design of the wireframe is kept to the minimal as the focus is on the flow and layout of the application. The full wireframe can be found at <a href="https://drive.google.com/file/d/0B_L13V4oU0QTOUZKaHlGalpCdk0/view?usp=sharing">https://drive.google.com/file/d/0B_L13V4oU0QTOUZKaHlGalpCdk0/view?usp=sharing</a></p>
+        <p class="body_text">After a group discussion on our sketches, we decided to implement these ideas to create a simple flow chart of the website. We wanted to develop a better understanding to how we, as users of the website, would get around. That’s why we constructed a simple wireframe using the sketches to build a simple user interface using flowchart software (<a href="http://www.draw.io">draw.io</a>), and outline of the website. The astehetic design of the wireframe is kept to the minimal as the focus is on the flow and layout of the application. The full wireframe can be found at <a href="https://drive.google.com/file/d/0B_L13V4oU0QTOUZKaHlGalpCdk0/view?usp=sharing">https://drive.google.com/file/d/0B_L13V4oU0QTOUZKaHlGalpCdk0/view?usp=sharing</a></p>
 
         <div class="mxgraph" style=
           "position:relative;overflow:auto;width:100%;height:600px;background-color:#ffffff;border:1px solid #DDD;">
@@ -400,15 +561,120 @@
         <p class="body_text">The information below the brain scan presents two main categories that the user can browse through. Either ‘Movies’ or ‘Components’. The Movies pane presents a list of other Movies that are highly associated with the selected Term, and ‘Components’ (for Neuroscientists) presents each individual Components that has the highest probaility of association with the selected Term.</p>
 
         <h2 class="title_body">Stage 4 : HTML/CSS Prototyping</h2>
-        <p class="body_text">With our finalised Photoshop Mockups, we start developing a HTML/CSS design prototype. The aim of the prototype was to experiement with the UI components of the Bootstrap framework. By building a clickable prototype, the team and stakeholders will have a clear idea of feel and look of the project.</p>
+        <p class="body_text">With our finalised Photoshop Mockups, we start developing a HTML/CSS design prototype. The aim of the prototype was to experiement with the UI components of the Bootstrap framework. By building a clickable prototype, the group and stakeholders will have a clear idea of feel and look of the project.</p>
 
 
       </div><!-- #prototype -->
 
-      <div id="experiment" role="tabpanel" class="tab-pane fade in">
-        <h2 class="title_body">Experiment</h2>
+      <div id="prototype" role="tabpanel" class="tab-pane fade in">
+
+        <h2 class="title_body">Prototype</h2>
+
         <p class="body_text">
-        Our experiemt for COMP204p is an Flask application, INcDb User. The application is based on the <a href="https://github.com/lingthio/Flask-User-starter-app">Flask-User-starter-app</a> as we will be using the Flask extension, Flask-User, to implement our user management functionality. The source code of the INcDb User is on <a href="https://github.com/UCL-CS35/incdb-user">https://github.com/UCL-CS35/incdb-user</a>. Beside the basic user management functionality from the starter app, we added 2 new fields, title and affiliation to reflect our project requirements. As the starter-app is dependent on an older version of Flask-User, we updated the code to support the new version of Flask-User. We also introduce test cases to experiment with pytest, our selected testing tool. See Testing Strategy for more information about testing.</p>
+          Our prototype for COMP204p is an Flask application, INcDb User. The application is based on the <a href="https://github.com/lingthio/Flask-User-starter-app">Flask-User-starter-app</a> as we will be using the Flask extension, Flask-User, to implement our user management functionality. The source code of the INcDb User is on <a href="https://github.com/UCL-CS35/incdb-user">https://github.com/UCL-CS35/incdb-user</a>.</p>
+
+          <p class="body_text"><strong>Add Relevant Fields</strong><br>Beside the basic user management functionality from the starter app, we added 2 new fields, <u>title</u> and <u>affiliation</u> to reflect our project requirements.</p>
+
+          <p class="body_text"><strong>Support latest version Flask-User</strong><br>As the starter-app is dependent on an older version of Flask-User, we updated the code to support the latest version of Flask-User.</p>
+
+          <p class="body_text"><strong>Unit Testing</strong><br>We also introduce test cases to experiment with pytest, our selected testing tool. See Testing Strategy for more information about testing.
+          </p>
+
+          <h3 class="title_body">Screenshots</h3>
+
+          <div class="row">
+            <div class="col-md-6">
+              <a href="#" class="thumbnail">
+                <img src="../images/screenshots/homepage.png">
+              </a>
+            </div>
+            <div class="col-md-6">
+              <a href="#" class="thumbnail">
+                <img src="../images/screenshots/signin.png">
+              </a>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <a href="#" class="thumbnail">
+                <img src="../images/screenshots/signedin.png">
+              </a>
+            </div>
+            <div class="col-md-6">
+              <a href="#" class="thumbnail">
+                <img src="../images/screenshots/nopermission.png">
+              </a>
+            </div>
+          </div>
+
+
+        <h3 class="title_body">Setup</h3>
+
+        <h4>Install Virtual Environment using pip:</h4>
+
+<pre>
+pip install virtualenv
+</pre>
+
+        <h4>Cloning the app</h4>
+<pre>
+mkdir INcDb
+cd INcDb
+git clone https://github.com/UCL-CS35/incdb-user.git incdb-user
+</pre>
+
+        <h4>Create the 'incdb-user' virtual environment</h4>
+
+<pre>
+mkvirtualenv incdb_user_env
+</pre>
+        <h4>Install required Python packages</h4>
+
+<pre>
+cd /path/to/incdb-user
+workon incdb_user_env
+pip install -r requirements.txt
+</pre>
+        
+        <h3 class="title_body">Configuring the app</h3>
+
+        <p class="body_text">Copy the app/env_settings_example.py to an env_settings.py that resides outside the code directory and point the OS environment variable ENV_SETTINGS_FILE to this file.</p>
+
+<pre>
+# Copy env_settings.py and place it outside of the code directory
+cd /path/to/project
+cp app/env_settings_example.py ../env_settings.py
+
+# Point the OS environment variable `ENV_SETTINGS_FILE` to this file
+export ENV_SETTINGS_FILE=/path/to/env_settings.py
+</pre>
+
+        <p class="body_text">Before deploying this application, we will have to configure the database URL and SMTP account that will be used to access the database and to send emails.</p>
+
+         <h3 class="title_body">Initializing the Database</h4>
+
+<pre>
+# Create DB tables and populate the roles and users tables
+python manage.py init_db
+</pre>
+
+         <h3 class="title_body">Running the app</h3>
+
+<pre>
+# Start the Flask development web server
+./runserver.sh    # will run "python manage.py runserver"
+</pre>
+
+        <p class="body_text">Point your web browser to http://localhost:5000/</p>
+
+        <p class="body_text">You can make use of the following users:
+          <ul>
+            <li>email user@example.com with password Password1.</li>
+            <li>email admin@example.com with password Password1.</li>
+          </ul>
+        </p>
+
         <h3 class="title_body">Data Model for INcDb User</h3>
         <h4>Users Table</h4>
         <div class="table-responsive">
@@ -510,14 +776,28 @@
             </tbody>
           </table>
         </div>
-      </div><!-- #experiment -->
+      </div><!-- #prototype -->
 
       <div id="testing" role="tabpanel" class="tab-pane fade in">
         <h2 class="title_body">Testing Strategy</h2>
-        <p class="body_text">We had research on <a href="https://github.com/jarus/flask-testing/">Flask-Testing</a> and <a href="http://www.pytest.org/">pytest</a> for our testing strategy. Flask-Testing is a Flask extension that provides us with a set of test utilities tools to conduct unit test on our codes. Pytest is a mature features-rich testing tool that can be used on any Python programs. We decided to use pytest because it has comprehensive documentation and there are plenty of troubleshoot resources available online.</p>
-       <p class="body_text">We need to add pytest and pytest-flask to our requirements.txt and then run pip install -r requirements.txt. Test cases are written in individual Python file located at /app-name/tests/. A shell script was written to run the test cases.</p>
-       <p class="body_text">Besides conducting unit testing, we will be conducting web testing using <a href="http://www.seleniumhq.org/">Selenium</a>. It a toolkit that allows us to run our web application on a selected browser and conduct test case on it. We will be using Selenium IDE which  record the sequence of user's actions and clicks in each test case. We will then run all the suite of all the test cases to start the automated testing process.</p>
-       <p class="body_text">For our Term 1 prototype, we ran a few test cases checking the functionality of user management. The source code for the test cases are located at <a href="https://github.com/UCL-CS35/incdb-user/blob/master/tests/test_user_management.py">https://github.com/UCL-CS35/incdb-user/blob/master/tests/test_user_management.py</a>.<br></p>
+        <p class="body_text">This page details the testing strategies that we will be adpoting to ensure the our PoC will be work properly.</p>
+
+        <h3 class="title_body">Unit Testing</h3>
+        <p class="body_text">We had conducted research on <a href="https://github.com/jarus/flask-testing/">Flask-Testing</a> and <a href="http://www.pytest.org/">pytest</a> for our unit testing strategy. Flask-Testing is a Flask extension that provides us with a set of test utilities tools to conduct unit test on our codes. Pytest is a mature features-rich testing tool that can be used on any Python programs. We decided to use pytest because it has comprehensive documentation and there are plenty of troubleshoot resources available online.</p>
+        
+        <p class="body_text">We need to add pytest and pytest-flask to our requirements.txt and then run pip install -r requirements.txt. Test cases are written in individual Python file located at /app-name/tests/. A shell script was written to run the test cases.</p>
+
+        <h3 class="title_body">Acceptance Testing</h3>
+        <p class="body_text">Acceptance tests are used to verify that a story (requirement) is complete. The tests are described in plain English and ensures the software, as a whole, is feature complete.</p>
+        <p class="body_text">For acceptance testing, we will be using <a href="http://lettuce.it/">Lettuce</a>. The test cases will be written in Gherkin Syntax. We need to write 2 files, Feature and Step. Feature files are written in plain English, and specify the area of the application that the tests cover. It include 3 key areas, Feature, Background and Scenario. Feature is a descripion of the feature to be tested. Background is executed before Scenario and setup the necessary conditions before running the test. Scenario define the test. Step file match each line in the Scenario to the Python code through Regular Expressions.</p>
+
+        <h3 class="title_body">Web Testing</h3>
+        <p class="body_text">Besides conducting unit testing and acceptance, we will be conducting web testing using <a href="http://www.seleniumhq.org/">Selenium</a>. It a toolkit that allows us to run our web application on a selected browser and conduct test case on it. We will be using Selenium IDE which  record the sequence of user's actions and clicks in each test case. We will then run all the suite of all the test cases to start the automated testing process. </p>
+
+        <h3 class="title_body">Unit Testing on Prototype</h3>
+        <p class="body_text">For our Term 1 prototype, we ran a few test cases checking the functionality of user management. The test cases include tesing if user can change password, edit their title, and first name and last name. The source code for the test cases are located at <a href="https://github.com/UCL-CS35/incdb-user/blob/master/tests/test_user_management.py">https://github.com/UCL-CS35/incdb-user/blob/master/tests/test_user_management.py</a>.<br></p>
+
+        <p class="body_text">To run the test, at the project folder, type ./runtests.sh. The image below is the result of running the test cases.</p>
         <div class="row">
           <div class="col-xs-12">
             <a href="#" class="thumbnail">
