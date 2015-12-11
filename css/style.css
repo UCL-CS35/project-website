@@ -286,9 +286,13 @@ table ul {
 	padding-left: 20px
 }
 
-h1, h2, h3, h4, ul, li {
+h1, h2, h3, h4 {
 	font-family: 'Titillium Web';
 	font-weight: 800;
+}
+
+ul, li {
+	font-family: 'Titillium Web';
 }
 
 pre {
