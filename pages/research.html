@@ -82,6 +82,19 @@
 
         <h2 class="title_body">Background Research: NeuroVault &amp; Neurosynth</h2>
 
+        <div class="row">
+          <div class="col-xs-6">
+            <a href="#" class="thumbnail">
+              <img src="../images/neurosynth.png">
+            </a>
+          </div>
+          <div class="col-xs-6">
+            <a href="#" class="thumbnail">
+              <img src="../images/neurovault.png">
+            </a>
+          </div>
+        </div>
+
         <p class="body_text">There are two open source websites, <a href="http://www.neurovault.org/">NeuroVault</a> and <a href="http://www.neurosynth.org/">Neurosynth</a>, that are widely used by neuroscience researchers. NeuroVault is a public repository for brain images supported by International Neuroinformatics Coordinating Facility, Max Planck Institute for Human Cognitive and Brain Sciences and Stanford University. Neurosynth is a platform that automate the process of producing functional magnetic resonance imaging (fMRI) data. Neurosynth process the data collected from numerous neuroimaging studies and does a meta-analysis on the coordinates in each study. The result is a images with a list of Terms that it is highly associated with.</p>
 
         <p class="body_text">As our client has developed a new study on capturing brain data while a person watch a movie, he want to build a public database that is similar to NeuroVault and Neurosynth. The database is a combination of both sites as it should allow users to interact with the brain image and view the list of Terms that it is highly associated with and at the same time allow other neuroscience researchers to upload their data for similar study</p>
@@ -561,24 +574,52 @@ $ heroku run upgrade
         <p class="body_text">The information below the brain scan presents two main categories that the user can browse through. Either ‘Movies’ or ‘Components’. The Movies pane presents a list of other Movies that are highly associated with the selected Term, and ‘Components’ (for Neuroscientists) presents each individual Components that has the highest probaility of association with the selected Term.</p>
 
         <h2 class="title_body">Stage 4 : HTML/CSS Prototyping</h2>
-        <p class="body_text">With our finalised Photoshop Mockups, we start developing a HTML/CSS design prototype. The aim of the prototype was to experiement with the UI components of the Bootstrap framework. By building a clickable prototype, the group and stakeholders will have a clear idea of feel and look of the project.</p>
+        <p class="body_text">With our finalised Photoshop Mockups, we started developing a HTML/CSS design prototype. The aim of the prototype was to experiement with the UI components of the Bootstrap framework. By building a clickable prototype, the group and stakeholders will have a clear idea of feel and look of the project.</p>
 
 
       </div><!-- #prototype -->
 
       <div id="prototype" role="tabpanel" class="tab-pane fade in">
 
-        <h2 class="title_body">Prototype</h2>
+        <h2 class="title_body">System Overview</h2>
+
+        <div class="row">
+          <div class="col-xs-12">
+            <a href="#" class="thumbnail">
+              <img src="../images/incdb-architecture.png">
+            </a>
+          </div>
+        </div>
+
+        <h2 class="title_body">Prototype (COMP204P)</h2>
 
         <p class="body_text">
           Our prototype for COMP204p is an Flask application, INcDb User. The application is based on the <a href="https://github.com/lingthio/Flask-User-starter-app">Flask-User-starter-app</a> as we will be using the Flask extension, Flask-User, to implement our user management functionality. The source code of the INcDb User is on <a href="https://github.com/UCL-CS35/incdb-user">https://github.com/UCL-CS35/incdb-user</a>.</p>
 
-          <p class="body_text"><strong>Add Relevant Fields</strong><br>Beside the basic user management functionality from the starter app, we added 2 new fields, <u>title</u> and <u>affiliation</u> to reflect our project requirements.</p>
+          <h3 class="title_body">Works Done</h3>
 
-          <p class="body_text"><strong>Support latest version Flask-User</strong><br>As the starter-app is dependent on an older version of Flask-User, we updated the code to support the latest version of Flask-User.</p>
+          <div class="row">
+            <div class="body_text col-lg-4">
+              <p class="body_text">
+                <strong>Add Relevant Fields</strong><br>
+                Beside the basic user management functionality from the starter app, we added 2 new fields, <u>title</u> and <u>affiliation</u> to reflect our project requirements.
+              </p>
+            </div>
 
-          <p class="body_text"><strong>Unit Testing</strong><br>We also introduce test cases to experiment with pytest, our selected testing tool. See Testing Strategy for more information about testing.
-          </p>
+            <div class="col-lg-4">
+              <p class="body_text">
+                <strong>Support latest version Flask-User</strong><br>
+                As the starter-app is dependent on an older version of Flask-User, we updated the code to support the latest version of Flask-User.
+              </p>
+            </div>
+
+            <div class="body_text col-lg-4">
+              <p class="body_text">
+                <strong>Unit Testing</strong><br>
+                We also introduce test cases to experiment with pytest, our selected testing tool. See Testing Strategy for more information about testing.
+              </p>
+            </div>
+          </div>
 
           <h3 class="title_body">Screenshots</h3>
 
